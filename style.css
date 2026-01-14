@@ -3,8 +3,8 @@ body{
   font-style: normal;
   background-color: black;
   color: white;
-    max-width: 70ch;
-  padding: 3em 1em;
+  max-width: 70ch;
+  padding: 1em 1em;
   margin: auto;
 }
 h3{
