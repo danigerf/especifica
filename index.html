@@ -98,7 +98,23 @@
         style="display: none"
         src="https://www.facebook.com/tr?id=547638512520159&ev=PageView&noscript=1"
     /></noscript>
-    <!-- End Meta Pixel Code -->
+
+    <script>
+      function gtagSendEvent(url) {
+        var callback = function () {
+          if (typeof url === "string") {
+            window.location.href = url;
+          }
+        };
+        gtag("event", "lead", {
+          event_callback: callback,
+          event_timeout: 2000,
+        });
+        return false;
+      }
+
+      function gtagevent(event) {}
+    </script>
   </head>
   <body role="main">
     <h1>> específica de matemática</h1>
@@ -144,6 +160,8 @@
       <li>
         <a
           href="https://wa.me/5562992147413?text=Ol%C3%A1%2C%20quero%20falar%20sobre%20a%20espec%C3%ADfica%20de%20matem%C3%A1tica"
+          id="link"
+          onclick="return gtagSendEvent(this.href);"
           >clique aqui para abrir o whatsapp</a
         >
       </li>
