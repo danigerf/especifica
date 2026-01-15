@@ -125,13 +125,14 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             window.location.href = url;
           }
         };
+        setTimeout(callback, 500);
         gtag("event", "conversion", {
           send_to: "AW-10992626957/8TRWCIim4-UbEI3a2Pko",
           value: 1.0,
           currency: "BRL",
           event_callback: callback,
         });
-        // return false;
+        return false;
       }
     </script>
   </head>
