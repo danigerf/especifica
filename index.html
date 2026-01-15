@@ -115,6 +115,25 @@
 
       function gtagevent(event) {}
     </script>
+
+    <!-- Event snippet for lead whatsapp conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url != "undefined") {
+            window.location.href = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-10992626957/8TRWCIim4-UbEI3a2Pko",
+          value: 1.0,
+          currency: "BRL",
+          event_callback: callback,
+        });
+        return false;
+      }
+    </script>
   </head>
   <body role="main">
     <h1>> específica de matemática</h1>
@@ -161,7 +180,7 @@
         <a
           href="https://wa.me/5562992147413?text=Ol%C3%A1%2C%20quero%20falar%20sobre%20a%20espec%C3%ADfica%20de%20matem%C3%A1tica"
           id="link"
-          onclick="return gtagSendEvent(this.href);"
+          onclick="return gtag_report_conversion(this.href);"
           >clique aqui para abrir o whatsapp</a
         >
       </li>
