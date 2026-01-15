@@ -103,7 +103,7 @@
       function gtagSendEvent(url) {
         var callback = function () {
           if (typeof url === "string") {
-            window.location.href = url;
+            window.location = url;
           }
         };
         gtag("event", "lead", {
@@ -131,7 +131,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           currency: "BRL",
           event_callback: callback,
         });
-        return false;
+        // return false;
       }
     </script>
   </head>
@@ -177,15 +177,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     <h4>incrições</h4>
     <ul>
       <li>
-        <!-- <a
-          href="https://wa.me/5562992147413?text=Ol%C3%A1%2C%20quero%20falar%20sobre%20a%20espec%C3%ADfica%20de%20matem%C3%A1tica"
-          id="link"
-          onclick="return gtag_report_conversion(this.href);"
-          >clique aqui para abrir o whatsapp</a
-        > -->
         <a
           href="https://wa.me/5562992147413?text=Ol%C3%A1%2C%20quero%20falar%20sobre%20a%20espec%C3%ADfica%20de%20matem%C3%A1tica"
           id="link"
+          onclick="return gtag_report_conversion(this.href);"
           >clique aqui para abrir o whatsapp</a
         >
       </li>
